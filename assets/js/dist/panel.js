@@ -7052,15 +7052,11 @@ var Search = function() {
 
     switch(e.keyCode) {
       case 13: // enter
-      case 38: // up
-      case 40: // down
-        navigate(e.keyCode);
-        e.preventDefault();
-        break;
-      default:
         var q   = $(this).val();
         var api = $('#search form').attr('action');
         $('.search-results').load(api, {q: q});
+        break;
+      default:
         break;
     }
 
